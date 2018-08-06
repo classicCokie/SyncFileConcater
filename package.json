@@ -1,0 +1,22 @@
+{
+  "name": "syncfileconcater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "concater.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/classicCokie/SyncFileConcater.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/classicCokie/SyncFileConcater/issues"
+  },
+  "homepage": "https://github.com/classicCokie/SyncFileConcater#readme",
+  "devDependencies": {
+    "fs": "0.0.1-security"
+  }
+}
