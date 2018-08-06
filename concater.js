@@ -1,6 +1,7 @@
 var fs =  require('fs');
 
 const MY_PATH = './persons/';
+const DESTINATION_FILE = './test.js';
 
 var concatedFile = "";
 
@@ -28,7 +29,7 @@ function readInAllFiles (dir, filelist) {
 }
 
 function writeToFile() {
-    fs.writeFile("./test.js", concatedFile, function(err) {
+    fs.writeFile(DESTINATION_FILE, concatedFile, function(err) {
         if(err) {
             return console.log(err);
         }
