@@ -5,19 +5,17 @@ const DESTINATION_FILE = './test.js';
 
 var concatedFile = "";
 
-readInAllFiles(MY_PATH, []);
+readInAllFiles(MY_PATH);
 writeToFile();
 
 function readInAllFiles (dir, filelist) {
 
     var files = fs.readdirSync(dir);
 
-    filelist = filelist || [];
-
     files.forEach(function(file) {
 
         if (fs.statSync(dir + file).isDirectory()) {
-            filelist = readInAllFiles(dir + file + '/', filelist);
+            readInAllFiles(dir + file + '/', filelist);
         }
         else {
             if (!/\.(js)$/.test(file)) {
