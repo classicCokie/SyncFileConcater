@@ -9,7 +9,7 @@ readInAllFiles(MY_PATH, []);
 writeToFile();
 
 function readInAllFiles (dir, filelist) {
-    
+
     var files = fs.readdirSync(dir);
 
     filelist = filelist || [];
@@ -20,7 +20,7 @@ function readInAllFiles (dir, filelist) {
             filelist = readInAllFiles(dir + file + '/', filelist);
         }
         else {
-            if (!/\.(js)$/.test(filename)) {
+            if (!/\.(js)$/.test(file)) {
                 return false;
             }
            concatedFile += fs.readFileSync(dir + file, 'utf-8');
@@ -33,7 +33,7 @@ function writeToFile() {
         if(err) {
             return console.log(err);
         }
-    }); 
+    });
 }
 
 
